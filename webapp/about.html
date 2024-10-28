@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Library</title>
+    <style>
+        /* Full background with overlay */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('images/f2.avif') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            overflow: hidden; /* Prevent scrolling */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Overlay that covers the entire background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Full background overlay */
+            z-index: 1;
+        }
+
+        /* Centered news card */
+        .news-card {
+            position: relative;
+            z-index: 2; /* Ensure the card is above the overlay */
+            max-width: 500px; /* Increased width */
+            padding: 30px; /* Increased padding for a more spacious look */
+            background-color: #ffffffeb;
+            border-radius: 20px; /* Smooth rounded corners */
+            margin: 50px auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Slightly enhanced shadow */
+            text-align: left; /* Align text to the left for better readability */
+            color: #222;
+        }
+
+        .news-card h2 {
+            font-size: 28px; /* Increased title size */
+            color: #44c6e6; /* Bright title color */
+            margin: 0 0 20px; /* Spacing below the title */
+            text-align: center; /* Center the title */
+        }
+
+        .news-card p {
+            font-size: 16px;
+            margin: 10px 0 20px;
+            line-height: 1.6; /* Improved line height for readability */
+            text-align: justify; /* Justify the text */
+        }
+
+        /* Author section */
+        .news-card .author {
+            font-size: 16px;
+            color: #777;
+            font-style: italic;
+            text-align: right; /* Align author to the right */
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .news-card {
+                max-width: 90%; /* Responsive width */
+                padding: 20px; /* Adjusted padding */
+            }
+            .news-card h2 {
+                font-size: 24px; /* Adjusted title size */
+            }
+            .news-card p {
+                font-size: 14px; /* Adjusted paragraph size */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- News Card -->
+<div class="news-card">
+    <h2>About Our Library</h2>
+    <p>Welcome to the heart of knowledge at JNTUA College of Engineering! Our library is not just a collection of books; it serves as a vibrant community hub that inspires learning, creativity, and collaboration. With an extensive array of resources ranging from textbooks to research papers, we empower students and faculty alike to explore new ideas and broaden their horizons. Our dedicated team is committed to creating a supportive environment where every visitor can embark on their intellectual journey. Join us in fostering a culture of lifelong learning and discovery!</p>
+    <div class="author">By Admin</div>
+</div>
+
+</body>
+</html>

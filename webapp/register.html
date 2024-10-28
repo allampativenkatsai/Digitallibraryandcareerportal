@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .background {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .container {
+            position: relative;
+            height: 500px; 
+            width: 500px; 
+            background-color: rgba(248, 220, 251, 0.85);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            z-index: 1;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            height: 100%; 
+        }
+        .header {
+            font-size: 32px;
+            color: #5e3370;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            width: 150px; 
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-right: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+            height: 35px;
+            width: 100%;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        #btn {
+            height: 40px;
+            width: 150px; /* Set to 150px */
+            background-color: #8e44ad;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 4px; 
+            cursor: pointer;
+            border: none;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            align-self: center; 
+        }
+        #btn:hover {
+            background-color: #5b2f6e;
+        }
+        .login-link {
+            margin-top: auto; 
+            font-size: 16px;
+            text-align: center;
+        }
+        .login-link a {
+            color: #5e3370;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img id="img" src="images/background-login.png" alt="Background Image"> 
+        <div class="container">
+            <form class="form" action="register" method="post">
+                <div class="header">Registration</div>
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="rollno">Roll No:</label>
+                    <input id="rollno" type="text" name="rollno" required placeholder="Enter your roll number">
+                </div>
+                <div class="input-group">
+                    <label for="pass">Password:</label>
+                    <input id="pass" type="password" name="password" required placeholder="Enter your password">
+                </div>
+                <div class="input-group">
+                    <label for="confirm">Confirm Password:</label>
+                    <input id="confirm" type="password" name="cpassword" required placeholder="Confirm your password">
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="tel" name="phnum" placeholder="Enter your phone number">
+                </div>
+                <input id="btn" type="submit" value="Register">
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

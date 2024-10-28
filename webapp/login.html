@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .background {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .container {
+            position: relative;
+            height: 380px;
+            width: 330px;
+            background-color: rgba(248, 220, 251, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1; /* Ensures container is above background */
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            font-size: 28px;
+            color: #5e3370;
+            margin-bottom: 10px;
+        }
+        #email, #pass {
+            height: 35px;
+            width: 250px;
+            margin: 5px auto 15px auto;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        #btn {
+            height: 40px;
+            width: 100px;
+            align-self: center;
+            background-color: #8e44ad;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        #btn:hover {
+            background-color: #5b2f6e;
+        }
+        #imgicon {
+            height: 60px;
+            width: 60px;
+            margin: 10px auto 15px auto;
+        }
+        label {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-left: 20px;
+            text-align: left;
+            display: block;
+        }
+        .register-link {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #5e3370;
+        }
+        .register-link a {
+            text-decoration: none;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img id="img" src="images/background-login.png" alt="Background Image"> <!-- Background Image -->
+        <div class="container">
+            <form class="form" action="login" method="post">
+                <div class="header">Login</div>
+                <img id="imgicon" src="images/loginicon.png" alt="Login Icon"> <!-- Login Icon -->
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required placeholder="Enter your email">
+                <label for="pass">Password:</label>
+                <input id="pass" type="password" name="password" required placeholder="Enter your password">
+                <input id="btn" type="submit" value="Login">
+                <div class="register-link">
+                    Don't have an account? <a href="register.html">Register here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
